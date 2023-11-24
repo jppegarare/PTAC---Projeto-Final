@@ -1,5 +1,10 @@
-export default function Home(){
+import { useState } from "react";
+import { Link } from "react-router-dom";
+export default function Home() {
     return(
-        <h1>PTAC 2 - PROJETO FINAL</h1>
-     );
+        <div>
+            <h1>Informe o Suejeito no Link abaixo</h1>
+            <Link to="/todo">Informe</Link>
+        </div>
+    )
 }
