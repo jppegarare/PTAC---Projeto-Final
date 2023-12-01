@@ -1,0 +1,46 @@
+body{
+    text-align: center;
+    font-family: fantasy;
+}
+
+.container{
+    margin:auto; 
+    max-width: 400px;
+    background-color: #cd1e0e;
+    padding: 50px;
+    font-family: fantasy;
+    border:groove 5px  ;
+    border-color: #4e0000;
+}
+
+.form{
+    border: 2px solid #4e0000;
+    background-color: #fc9067;
+    font-family: fantasy;
+}
+
+
+
+.buttonRemove{
+    font-family: fantasy;
+    background-color: #fc9067;
+}
+
+.buttonRegister{
+    font-family: fantasy;
+    background-color: #fc9067;
+}
+
+.info{
+    font-family: fantasy;
+}
+
+header {
+    background: blue;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+footer {
+    background-color: blue;
+}

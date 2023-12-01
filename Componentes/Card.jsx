@@ -1,6 +1,9 @@
 export default function Card({}){
 
     return(
-        <h1>{}</h1>
+        <div class="card">
+            <h1>Titulo</h1>
+            <button>clica</button>
+        </div>
     )
 }
