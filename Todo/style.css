@@ -1,5 +1,5 @@
 body{
-    background-color: #f72812;
+    background-color: #c4ffff;
     text-align: center;
     font-family: fantasy;
 }
@@ -7,7 +7,7 @@ body{
 .container{
     margin:auto; 
     max-width: 400px;
-    background-color: #cd1e0e;
+    background-color: #;
     padding: 50px;
     font-family: fantasy;
     border:groove 5px  ;

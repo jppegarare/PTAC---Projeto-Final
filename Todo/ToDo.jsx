@@ -3,11 +3,10 @@ import { Link } from "react-router-dom";
 import"./style.css"
 import { useEffect } from "react";
 export default function ToDo() {
-    const listaLocalStorage = JSON.parse(localStorage.getItem("Lista"))
-    const[personagem, setPersongem] = useState("")
-    const[idade, setIdade] = useState()
-    const[recompensa, setRecompensa] = useState("")
-    const[local, setLocal] = useState("")
+    const listaLocalStorage = JSON.parse(localStorage.getItem("Lista")|| [] )
+    const[titulo, setTitulo] = useState("")
+    const[url, setUrl] = useState("")
+    const[descricao, setDescricao] = useState("")
     const[listas, setListas] = useState(listaLocalStorage || [])
     const[identidade, setIdentidade] = useState(listaLocalStorage[listaLocalStorage.length - 1]?.identidade + 1 || 1)
 
@@ -16,14 +15,12 @@ export default function ToDo() {
     const salvar = (e) => {
         e.preventDefault()
         setListas([...listas, {
-            personagem:personagem, idade:idade, recompensa:recompensa, local:local, identidade:identidade,
+            titulo:titulo, url:url, descricao:descricao, identidade:identidade
         }])
         setIdentidade(identidade + 1)
         console.log(listas)
-    }
+    };
    
-        setListas(auxLista)
-    }
 
     return (
         <div class="container">
@@ -31,17 +28,14 @@ export default function ToDo() {
             <h1>Informe o Foragido </h1>
 
             <form onSubmit={salvar}>
-                <h3>Nome?</h3>
-                <input class="form" type="text" value={personagem} onChange={(e) => {setPersongem(e.target.value)}}></input>
+                <h3>Adicionar título do vídeo</h3>
+                <input class="form" type="text" value={titulo} onChange={(e) => {setTitulo(e.target.value)}}></input>
 
-                <h3>Idade?</h3>
-                <input class="form" type="number" value={idade} onChange={(e) => {setIdade(e.target.value)}}></input>
+                <h3>Adicionar Url do vídeo?</h3>
+                <input class="form" type="text" value={url} onChange={(e) => {setUrl(e.target.value)}}></input>
 
-                <h3>Recompensa?</h3>
-                <input class="form" type="text" value={recompensa} onChange={(e) => {setRecompensa(e.target.value)}}></input>
-
-                <h3>Visto em?</h3>
-                <input class="form" type="text" value={local} onChange={(e) => {setLocal(e.target.value)}}></input>
+                <h3>Adicionar descrição</h3>
+                <input class="form" type="text" value={descricao} onChange={(e) => {setDescricao(e.target.value)}}></input>
 
                 <br/>
                 <br/>
@@ -55,14 +49,24 @@ export default function ToDo() {
                     <Link to={`/Detalhe/${atv.identidade}`}>
                         <li>{atv.identidade}</li>
                     </Link>
-                    <p class="info">Sujeito Procurado: {atv.personagem}</p>
-                    <p class="info">Idade: {atv.idade}</p>
-                    <p class="info">Recompensa: {atv.recompensa}</p>
-                    <p class="info">Visto em: {atv.local}</p>
-                    <button class="buttonRemove" onClick={() => remover(atv.identidade)}>Remover</button>                           
+                    <p class="info">{atv.titulo}</p>
+                    <p class="info">{atv.url}</p>
+                    <p class="info">{atv.descricao}</p>   
+
+                    <iframe 
+                     width="1309"
+                     height="499"
+                     src={`https://www.youtube.com/embed/${video.url.slice(17)}`}
+                     title="fiz um jogos mortais com personagens no the sims 4" 
+                     frameborder={0} 
+                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+
+                    </iframe>
+
                 </div>
             )}
         </div>
 
     );
-}
+            }
