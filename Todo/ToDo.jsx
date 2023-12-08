@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import"./style.css"
 import { useEffect } from "react";
 export default function ToDo() {
-    const listaLocalStorage = JSON.parse(localStorage.getItem("Lista")|| [] )
+    const listaLocalStorage = JSON.parse(localStorage.getItem("Lista"))|| [] ;
     const[titulo, setTitulo] = useState("")
     const[url, setUrl] = useState("")
     const[descricao, setDescricao] = useState("")
@@ -31,7 +31,7 @@ export default function ToDo() {
                 <h3>Adicionar título do vídeo</h3>
                 <input class="form" type="text" value={titulo} onChange={(e) => {setTitulo(e.target.value)}}></input>
 
-                <h3>Adicionar Url do vídeo?</h3>
+                <h3>Adicionar Url do vídeo</h3>
                 <input class="form" type="text" value={url} onChange={(e) => {setUrl(e.target.value)}}></input>
 
                 <h3>Adicionar descrição</h3>
@@ -40,22 +40,22 @@ export default function ToDo() {
                 <br/>
                 <br/>
 
-                <button class="buttonRegister">Registrar</button>
+                <button class="buttonRegister">Upar</button>
             </form>
 
-            {listas.map((atv) => 
-                <div key = {atv.identidade}>
+            {listas.map((video) => 
+                <div key = {video.identidade}>
                     
-                    <Link to={`/Detalhe/${atv.identidade}`}>
-                        <li>{atv.identidade}</li>
+                    <Link to={`/Detalhe/${video.identidade}`}>
+                        <li>{video.identidade}</li>
                     </Link>
-                    <p class="info">{atv.titulo}</p>
-                    <p class="info">{atv.url}</p>
-                    <p class="info">{atv.descricao}</p>   
+                    <p class="info">{video.titulo}</p>
+                    <p class="info">{video.url}</p>
+                    <p class="info">{video.descricao}</p>   
 
                     <iframe 
-                     width="1309"
-                     height="499"
+                     width="320"
+                     height="240"
                      src={`https://www.youtube.com/embed/${video.url.slice(17)}`}
                      title="fiz um jogos mortais com personagens no the sims 4" 
                      frameborder={0} 

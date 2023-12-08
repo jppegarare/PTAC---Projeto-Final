@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import"./style.css"
+import Card from "../Componentes/Card"
 export default function Home() {
+
+    const listaLocalStorage = JSON.parse(localStorage.getItem("Lista"))|| [] ;
+
     return(
         <div>
             <nav>
@@ -12,7 +16,7 @@ export default function Home() {
             <h2>
             <Link to="/ToDo">Informe</Link>
             </h2>
-
+            {listaLocalStorage.map((video) => <Card video = {video}/>)}
 
             <footer>
                 oi
