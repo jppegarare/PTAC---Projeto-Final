@@ -25,7 +25,7 @@ export default function ToDo() {
     return (
         <div class="container">
             <Link to="/">Home</Link>
-            <h1>Informe o Foragido </h1>
+            <h1>Informe os dados do video </h1>
 
             <form onSubmit={salvar}>
                 <h3>Adicionar título do vídeo</h3>
@@ -61,7 +61,6 @@ export default function ToDo() {
                      frameborder={0} 
                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     allowfullscreen>
-
                     </iframe>
 
                 </div>

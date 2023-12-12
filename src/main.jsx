@@ -9,7 +9,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
      <BrowserRouter>
       <Routes>
         <Route path='/todo' element={<ToDo />}></Route>
-        <Route path='/componentes' element={<Destaque />}></Route>
+        <Route path='/destaque' element={<Destaque />}></Route>
         <Route path="/" element={<Home />}></Route>
       </Routes>
     </BrowserRouter>
