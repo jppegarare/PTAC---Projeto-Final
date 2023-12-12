@@ -1,11 +1,13 @@
+
 export default function Card({video}){
     const videoUrl = video.url.slice(17)
     return(
         <div>
-
+             <h4>{video.titulo}</h4>
+             
             <iframe 
              width="320"
-             height="1"
+             height="240"
              src={`https://www.youtube.com/embed/${video.url.slice(videoUrl)}`}
              title="Titulo" 
              frameborder={0} 
@@ -13,7 +15,7 @@ export default function Card({video}){
              allowfullscreen>
              </iframe>
 
-             <h4>{video.titulo}</h4>
+
         </div>
 
         

@@ -14,15 +14,12 @@ export default function Home() {
             </header>
             </nav>
             <h2>
-            <Link to="/ToDo">Adicione um Video</Link>
-            </h2>
-            <h2>
-            <Link to="/Componentes/Destaque">Destaque</Link>
+            <Link to="/ToDo">Adicione um video</Link>
             </h2>
             {listaLocalStorage.map((video) => <Card video = {video}/>)}
 
             <footer>
-                oi
+                rodapé
             </footer>
         </div>
     )
