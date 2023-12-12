@@ -9,7 +9,7 @@ export default function Card({video}){
             <iframe 
              width="320"
              height="240"
-             src={`https://www.youtube.com/embed/${videoUrl}`}
+             src={`https://www.youtube.com/embed/${video.url.slice(videoUrl)}`}
              title="Titulo" 
              frameborder={0} 
              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -18,4 +18,7 @@ export default function Card({video}){
 
 
         </div>
+
+        
+           
            )}

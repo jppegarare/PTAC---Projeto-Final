@@ -8,15 +8,15 @@ body{
     margin:auto; 
     max-width: 400px;
     background-color: #009092;
-    padding: 50px;
-    font-family: fantasy;
+    padding: 180px;
+    font-family: sans-serif;
     border: 2px solid #00c6c7 ;
 }
 
 .form{
     border: 2px solid #4e0000;
     background-color: #8bffff;
-    font-family: fantasy;
+    font-family: sans-serif;
 }
 
 
@@ -26,5 +26,5 @@ body{
 }
 
 .info{
-    font-family: fantasy;
+    font-family: sans-serif;
 }

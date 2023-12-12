@@ -14,10 +14,7 @@ export default function Detalhe() {
 
     return(
 
-
-        
-
-        <div>
+        <div class="card">
  <Card video={atividade[0]}></Card>
         </div>
        

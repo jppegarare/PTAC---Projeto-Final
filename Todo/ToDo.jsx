@@ -41,6 +41,9 @@ export default function ToDo() {
                 <br/>
 
                 <button class="buttonRegister">Upar</button>
+
+                <br/>
+                <br/>
             </form>
 
             {listas.map((video) => 
@@ -53,6 +56,7 @@ export default function ToDo() {
                     <p class="info">{video.url}</p>
                     <p class="info">{video.descricao}</p>  
 
+                    
                     <iframe 
                      width="320"
                      height="240"
