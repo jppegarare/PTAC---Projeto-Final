@@ -1,26 +1,18 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import"./style.css"
+import { Link, useParams } from "react-router-dom";
 import Card from "../Componentes/Card"
-export default function Home() {
+export default function Detalhe() {
 
+    const {identidade} = useParams;
     const listaLocalStorage = JSON.parse(localStorage.getItem("Lista"))|| [] ;
+    const atividade = listaLocalStorage.filter( (video) => {
+        if(video.identidade == identidade){
+            return video
+        }
+        return null
+    })
 
     return(
-        <div>
-            <nav>
-            <header>
-                <h1>Videos Legais</h1>
-            </header>
-            </nav>
-            <h2>
-            <Link to="/ToDo">Adicione um video</Link>
-            </h2>
-            {listaLocalStorage.map((video) => <Card video = {video}/>)}
-
-            <footer>
-                rodapé
-            </footer>
-        </div>
+        <Card video={atividade[0]}></Card>
     )
 }

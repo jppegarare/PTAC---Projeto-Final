@@ -47,11 +47,11 @@ export default function ToDo() {
                 <div key = {video.identidade}>
                     
                     <Link to={`/Detalhe/${video.identidade}`}>
-                        <li>{video.identidade}</li>
+                        <li>{video.titulo}</li>
                     </Link>
                     <p class="info">{video.titulo}</p>
                     <p class="info">{video.url}</p>
-                    <p class="info">{video.descricao}</p>   
+                    <p class="info">{video.descricao}</p>  
 
                     <iframe 
                      width="320"
