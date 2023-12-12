@@ -7,28 +7,22 @@ body{
 .container{
     margin:auto; 
     max-width: 400px;
-    background-color: #;
+    background-color: #009092;
     padding: 50px;
     font-family: fantasy;
-    border:groove 5px  ;
+    border: 2px solid #00c6c7 ;
 }
 
 .form{
     border: 2px solid #4e0000;
-    background-color: #fc9067;
+    background-color: #8bffff;
     font-family: fantasy;
 }
 
-
-
-.buttonRemove{
-    font-family: fantasy;
-    background-color: #fc9067;
-}
 
 .buttonRegister{
     font-family: fantasy;
-    background-color: #fc9067;
+    background-color: #00ffff;
 }
 
 .info{

@@ -1,5 +1,6 @@
 
 export default function Card({video}){
+    console.log(video)
     const videoUrl = video.url.slice(17)
     return(
         <div>
@@ -8,7 +9,7 @@ export default function Card({video}){
             <iframe 
              width="320"
              height="240"
-             src={`https://www.youtube.com/embed/${video.url.slice(videoUrl)}`}
+             src={`https://www.youtube.com/embed/${videoUrl}`}
              title="Titulo" 
              frameborder={0} 
              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -17,7 +18,4 @@ export default function Card({video}){
 
 
         </div>
-
-        
-           
            )}

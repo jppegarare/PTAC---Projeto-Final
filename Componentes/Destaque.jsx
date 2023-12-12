@@ -13,6 +13,8 @@ export default function Home() {
             </header>
             </nav>
 
+            <Link to="/">Home</Link>
+
             {listaLocalStorage.slice(-4).map((video) => <Card video = {video}/>)}
 
             <footer>
